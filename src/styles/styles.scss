@@ -1,0 +1,111 @@
+$base-unit: 'em' !default;
+$base-font-family: 'Share Tech Mono', monospace !default;
+$base-font-size: 40px !default;
+$base-line-height: 40px !default;
+
+@import "~normalize-scss/fork-versions/default/variables";
+@import "~normalize-scss/fork-versions/default/vertical-rhythm";
+@import "~normalize-scss/fork-versions/default/normalize";
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #333;
+}
+
+.calculator {
+  width: 350px;
+  background-color: white;
+  padding: 15px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.error {
+  background-color: red;
+}
+
+.display {
+  .input,
+  .output {
+    margin: 0;
+    text-align: right;
+  }
+
+  .input {
+    padding: 15px;
+    font-size: 1.2em;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    transition: background-color 1s;
+  }
+
+  .output {
+    font-size: 0.8em;
+    color: #757575;
+  }
+
+  .input,
+  .output {
+    height: 40px;
+  }
+}
+
+.unselectable,
+.unselectable:hover {
+  user-select: none;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1px;
+  margin-top: 15px;
+
+  .group {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0.1em;
+  }
+
+  .button {
+    line-height: 60px;
+    min-width: 68px;
+    text-align: center;
+    border: 1px solid #dedede;
+    color: #444;
+    background: #f5f5f5 linear-gradient(to bottom, #f5f5f5, #f1f1f1);
+
+    &:hover {
+      background: #f8f8f8 linear-gradient(to bottom, #f8f8f8, #f1f1f1);
+      border: 1px solid #c6c6c6;
+      cursor: pointer;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    }
+  }
+
+  .control {
+    background: #d6d6d6 linear-gradient(to bottom, #d6d6d6, #d0d0d0);
+    border: 1px solid #c6c6c6;
+    color: #444;
+
+    &:hover {
+      background: #d9d9d9 linear-gradient(to bottom, #d9d9d9, #d0d0d0);
+      border: 1px solid #b6b6b6;
+      color: #222;
+    }
+  }
+}
+
+@media (min-width: 380px) and (min-height: 510px) {
+  .controls {
+    .group {
+      margin-bottom: 15px;
+    }
+  }
+}
