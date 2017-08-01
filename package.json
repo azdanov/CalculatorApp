@@ -1,6 +1,6 @@
 {
   "name": "calculatorapp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Calculator app for FreeCodeCamp",
   "main": "index.html",
   "scripts": {

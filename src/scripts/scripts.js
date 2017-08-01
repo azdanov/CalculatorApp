@@ -5,7 +5,7 @@ const precision = 100000
 let mathBuffer = ''
 
 function updateMathBuffer (symbol) {
-  if (symbol === 'DEL') {
+  if (symbol === 'CE') {
     mathBuffer = mathBuffer.slice(0, -1)
     $input.textContent = mathBuffer
 
