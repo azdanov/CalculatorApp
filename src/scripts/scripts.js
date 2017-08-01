@@ -7,7 +7,7 @@ let mathBuffer = ''
 function updateMathBuffer (symbol) {
   if (symbol === 'CE') {
     mathBuffer = mathBuffer.slice(0, -1)
-    $input.textContent = mathBuffer
+    $input.textContent = mathBuffer.toLocaleString()
 
     if (mathBuffer.length === 0) {
       $output.textContent = ''
@@ -42,7 +42,7 @@ function evaluateMathBuffer () {
     window.setTimeout(() => $input.classList.remove('error'), 100)
     return
   }
-  $input.textContent = result
+  $input.textContent = result.toLocaleString()
   $output.textContent = mathBuffer
   mathBuffer = result.toString()
 }
